@@ -1,0 +1,163 @@
+$fuente-p: 'Dosis', sans-serif;
+$fuente-nav:'Patrick Hand SC', cursive;
+$tam-titulo: 160%;
+$top: 2%;
+$bot: 1%;
+$sombra: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.17);
+$color:rgb(237, 242, 244);
+$quiebre: 1000px;
+$quiebre2: 800px;
+$hr: rgb(29, 53, 87);
+
+%margenes{
+    margin-left:auto;
+    margin-right:auto;
+}
+body{
+    background-color: rgb(141, 153, 174);
+}
+
+a{
+    font-weight: 700;
+    font-family: $fuente-nav;
+}
+h3{
+    font-family: 'Pangolin', cursive;
+}
+h4{
+    color:rgb(43, 45, 66) !important;
+    text-align: left !important;
+}
+p{
+    font-family: $fuente-p;
+    font-size: 120%;
+    text-align:justify;
+}
+@media screen and (max-width: 800px){
+p{
+    font-size: 100%;
+    text-align:justify;
+}}
+
+.alinear{
+    margin-top:$top;
+    margin-bottom:$bot;
+    text-align:center;
+    color:white;
+}
+.titulo{
+    font-size: $tam-titulo;
+}
+.banner{
+    display:block;
+    @extend %margenes;
+    margin-bottom: $bot;
+    overflow: hidden;
+    max-width: 70%;
+    height:65%;
+    
+}
+.banner:hover{
+    box-shadow: $sombra;
+
+}
+.card:hover{
+    box-shadow: $sombra;
+}
+
+.tabla{
+    @extend %margenes;
+    width: 50%;
+    background-color: white;
+
+    td, th{
+        text-align: center;
+    }
+
+}
+.icon{
+    display:block;
+    width:20%;
+    height:auto;
+    align-items:center;
+    @extend %margenes;
+}
+
+
+.sty{
+    margin-top:2%;
+    width: 95% !important;
+}
+.clr, .clr2{
+    background-color:rgb(237, 242, 244);
+    padding: 1%;
+}
+.sep{
+    margin-right: 1%;
+    padding: 1%;
+}
+
+.jumbotron{
+    @extend %margenes;
+    margin-bottom: $bot;
+    float: center !important;
+    height: 40% !important;
+    width:95% !important;
+    background-color:$color;
+}
+
+hr{
+    width:90%;
+    margin-left:0;
+    border: 1px solid $hr;
+}
+.no2 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border: 1.5px dotted $hr !important;
+  }
+#ex{
+    color: rgb(43, 45, 66) !important;
+}
+.ult{
+    @extend %margenes;
+    padding:1%;
+    width:95%;
+    border-radius: 5px;
+    background-color:$color;
+}
+
+@media (min-width: 1001px){
+    .clr2{
+        display:none;
+    }
+}
+@media screen and (max-width: $quiebre){
+    .banner{
+        width:110%;
+        height: auto;
+    }
+    .sep{
+        display:block !important;
+        margin-left: 1%;
+        margin-bottom: 3%;
+        padding: 1%;
+    }
+    .clr{
+        display:none;
+    }
+    .clr2{
+        display:block
+    }}
+    #ex{
+        font-size: $tam-titulo;
+}
+@media screen and (max-width: $quiebre2 ){
+    .tabla{
+        width: 95%;
+    }
+    .icon{
+        width: 50%;
+        object-fit: cover;
+    }
+}
