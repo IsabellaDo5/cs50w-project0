@@ -38,7 +38,9 @@ p{
     font-size: 100%;
     text-align:justify;
 }}
-
+.txt{
+    color:rgb(43, 45, 66) !important;
+}
 .alinear{
     margin-top:$top;
     margin-bottom:$bot;
@@ -54,8 +56,8 @@ p{
     margin-bottom: $bot;
     overflow: hidden;
     max-width: 70%;
-    height:65%;
-    
+    height:68%;
+
 }
 .banner:hover{
     box-shadow: $sombra;
@@ -83,7 +85,13 @@ p{
     @extend %margenes;
 }
 
+.icon2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:100px;
 
+}
 .sty{
     margin-top:2%;
     width: 95% !important;
@@ -121,8 +129,10 @@ hr{
 }
 .ult{
     @extend %margenes;
-    padding:1%;
-    width:95%;
+    margin-top:3%;
+    margin-bottom:3%;
+    padding:2%;
+    width:70%;
     border-radius: 5px;
     background-color:$color;
 }
@@ -148,7 +158,11 @@ hr{
     }
     .clr2{
         display:block
-    }}
+    }
+    .ult{
+        width:90%;
+    }
+}
     #ex{
         font-size: $tam-titulo;
 }
